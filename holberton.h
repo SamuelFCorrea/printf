@@ -1,4 +1,4 @@
-B#ifndef HOLBERTON_H
+#ifndef HOLBERTON_H
 #define HOLBERTON_H
 
 #include <stdio.h>
@@ -15,11 +15,13 @@ B#ifndef HOLBERTON_H
 
 typedef struct types
 {
-	char *flags;
-	int width;
-	char *length;
-	char specifier;
-	char *top;
+char *flags;
+int width;
+char *length;
+char specifier;
+char *top;
+int (*f)();
+
 } new_t;
 
 int _putchar(char c);
