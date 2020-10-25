@@ -1,4 +1,4 @@
-#ifndef HOLBERTON_H
+B#ifndef HOLBERTON_H
 #define HOLBERTON_H
 
 #include <stdio.h>
@@ -24,5 +24,6 @@ typedef struct types
 
 int _putchar(char c);
 int _printf(const char *format, ...);
+int atoi(const char *str);
 
 #endif
