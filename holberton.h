@@ -13,6 +13,15 @@
  * @func : funcion para imprimir las funciones
  */
 
+typedef struct types
+{
+	char *flags;
+	int width;
+	char *length;
+	char specifier;
+	char *top;
+} new_t;
+
 int _putchar(char c);
 int _printf(const char *format, ...);
 
