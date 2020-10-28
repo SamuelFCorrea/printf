@@ -29,7 +29,7 @@ int _printf(const char *format, ...)
 			write(1, format + i, 1);
 			p++;
 		}
-	}
 	r = p + (*new).charprinted;
+	}
 	return (r);
 }
