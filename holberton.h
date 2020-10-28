@@ -30,4 +30,6 @@ int print_string(va_list);
 
 int print_int(va_list);
 
+void printnumber(int);
+
 #endif
