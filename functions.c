@@ -39,9 +39,9 @@ int print_string(va_list arg)
 {
 	int r;
 	char *s;
- 
+
 	s = va_arg(arg, char *);
-	if(!s)
+	if (!s)
 	s = "(null)";
 	for (r = 0; s[r]; r++)
 	_putchar(s[r]);
