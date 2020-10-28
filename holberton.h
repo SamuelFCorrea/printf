@@ -8,14 +8,14 @@
 
 /**
  * struct format_s - struct
- * @type: <=
- * @f: function
+ * @type: comparar la funcion
+ * @f: function asociada
  */
 
 typedef struct format_s
 {
-	char type;
-	int (*f)();
+char type;
+int (*f)();
 } format_t;
 
 int _printf(const char *format, ...);
