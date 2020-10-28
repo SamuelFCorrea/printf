@@ -62,7 +62,8 @@ int print_int(va_list arg)
 	for (i = 0; aux != 0; i++, aux /= 10, o *= 10)
 		;
 	for (j = 0; j < i; j++)
+		if (i > 1)
 		_putchar((n / o) + '0');
-	putchar((n % 10) + '0');
+	_putchar((n % 10) + '0');
 	return (i);
 }
