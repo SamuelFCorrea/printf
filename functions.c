@@ -37,11 +37,14 @@ int print_char(va_list arg)
 
 int print_string(va_list arg)
 {
-	int i, r = 0;
-	char *s = va_arg(arg, char *);
-
-	for (i = 0; *(s + i); i++)
-		r += _putchar(*(s + i));
+	int r;
+	char *s;
+ 
+	s = va_arg(arg, char *);
+	if(!s)
+	s = "(null)";
+	for (r = 0; s[r]; r++)
+	_putchar(s[r]);
 	return (r);
 }
 
