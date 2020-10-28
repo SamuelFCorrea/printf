@@ -24,6 +24,7 @@ void _printchar(va_list arg, new_t *new)
 		const int aux = va_arg(arg, int);
 
 		write(1, &aux, 1);
+		i = 1;
 	}
 	else if ((*new).specifier == 's')
 	{
@@ -43,7 +44,7 @@ void _printchar(va_list arg, new_t *new)
 	if (m == 1)
 	for (; i < ff; i++)
 		write(1, " ", 1);
-	(*new).charprinted = i;
+	(*new).charprinted += i;
 }
 
 /**

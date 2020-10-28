@@ -18,6 +18,7 @@ int _printf(const char *format, ...)
 		return (1);
 
 	va_start(arg, format);
+	(*new).charprinted = 0;
 	for (i = 0; format && format[i]; i++)
 	{
 		if (format[i] == '%')
