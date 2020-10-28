@@ -13,14 +13,14 @@ int (*get_op_func(char c))(va_list)
 format_t p_type[] = {
 {'c', print_char},
 {'s', print_string},
-{'i', print_number},
-{'d', print_number},
+{'i', print_int},
+{'d', print_int},
 {'\0', NULL},
 };
 	unsigned int j;
 
 	for (j = 0; p_type[j].type; j++)
-		if (s == p_type[j].type)
+		if (c == p_type[j].type)
 			return (p_type[j].f);
 
 	return (NULL);
@@ -36,7 +36,7 @@ format_t p_type[] = {
 
 int _printf(const char *format, ...)
 {
-	va_list p_list;	
+	va_list p_list;
 	unsigned int i, len = 0;
 	int (*f)(va_list);
 

@@ -5,15 +5,17 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
+
 /**
- *
- *pendiente
- *
+ * struct format_s - struct
+ * @type: <=
+ * @f: function
  */
+
 typedef struct format_s
 {
-  char type;
-  int (*f)();
+	char type;
+	int (*f)();
 } format_t;
 
 int _printf(const char *format, ...);
