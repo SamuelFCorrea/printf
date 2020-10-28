@@ -57,15 +57,37 @@ int print_string(va_list arg)
 
 int print_int(va_list arg)
 {
-	int i, j, aux, n, o = 1;
+	int i = 0, n;
 
-	aux = va_arg(arg, int);
-	n = aux;
-
-	for (i = 0; aux != 0; i++, aux /= 10, o *= 10)
-		;
-	for (j = 0; j < i; j++)
-		_putchar((n / o) + '0');
-	putchar((n % 10) + '0');
+	n = va_arg(arg, int);
+	printnumber(n);
+	if (n < 0)
+		i++;
+	for (; n != 0; i++)
+		n /= 10;
 	return (i);
+}
+
+/**
+ * printnumber - print a number
+ * @n: number
+ *
+ * Return: none
+ */
+
+void printnumber(int n)
+{
+	if (n < 0)
+	{
+		_putchar('-');
+		n = -n;
+	}
+
+	if (n == 0)
+		_putchar('0');
+
+	if (n / 10)
+		printnumber(n / 10);
+
+	_putchar((n % 10) + '0');
 }
