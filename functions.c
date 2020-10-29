@@ -60,6 +60,11 @@ int print_int(va_list arg)
 	int i = 0, n;
 
 	n = va_arg(arg, int);
+	if (!n)
+	{
+		_putchar('0');
+		return (1);
+	}
 	printnumber(n);
 	if (n < 0)
 		i++;
